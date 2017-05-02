@@ -61,7 +61,6 @@ ONBUILD ENV NODE_ENV $NODE_ENV
 ONBUILD COPY package.json /usr/src/app/
 ONBUILD RUN npm install && npm cache clean
 ONBUILD COPY . /usr/src/app
-ONBUILD RUN npm run compile
 
 ENTRYPOINT []
 CMD ["npm", "start"]
